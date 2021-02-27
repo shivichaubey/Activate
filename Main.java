@@ -20,7 +20,7 @@ public class Main {
 		ListOfEvents lEvents = new ListOfEvents();
 		ArrayList<Event> aEvents = new ArrayList<Event>();
 		aEvents = lEvents.makeArray();
-
+//idk why this is not adding 
 		
 		while(!input.equals("no")){
 			System.out.println("Enter Event Name");
@@ -32,12 +32,14 @@ public class Main {
 			System.out.println("Enter Event EndTime");
 			eventEndTime = keyboard.nextDouble();
 			System.out.println("Enter Event Type");
+			//idk why this is breaking
 			eventType = keyboard.nextLine();
 			Event e = new Event(eventName, eventLocation, eventStartTime, eventEndTime, eventType);
 			lEvents.addEvent(e);
 			System.out.println("Would you like to add another event?");
 			input = keyboard.nextLine();
 		}
+		
 		System.out.println("Congratulations! Here are your events!:");
 		System.out.println(aEvents.toString());
 		System.out.println("Please Select an Event to Update or say no");
