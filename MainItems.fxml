@@ -4,12 +4,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 
-
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1">
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="active.view.MainItemsController">
    <center>
       <FlowPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Activism Near you" />
+            <Button mnemonicParsing="false" onAction="#goActiveEvents" text="Activism Near you" />
             <Button mnemonicParsing="false" text="About The App" />
             <Button mnemonicParsing="false" text="About the Creators" />
          </children>
