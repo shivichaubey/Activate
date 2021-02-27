@@ -2,7 +2,7 @@
 import java.text.SimpleDateFormat;
 
 import java.util.*;
-
+//kinda done?
 
 public class Main {
 
@@ -20,8 +20,7 @@ public class Main {
 		ListOfEvents lEvents = new ListOfEvents();
 		ArrayList<Event> aEvents = new ArrayList<Event>();
 		aEvents = lEvents.makeArray();
-//idk why this is not adding 
-		
+       //idk why this is not adding 	
 		while(!input.equals("no")){
 			System.out.println("Enter Event Name");
 			eventName = keyboard.nextLine();
@@ -32,16 +31,21 @@ public class Main {
 			System.out.println("Enter Event EndTime");
 			eventEndTime = keyboard.nextDouble();
 			System.out.println("Enter Event Type");
+			keyboard.nextLine();
 			//idk why this is breaking
 			eventType = keyboard.nextLine();
 			Event e = new Event(eventName, eventLocation, eventStartTime, eventEndTime, eventType);
-			lEvents.addEvent(e);
+			aEvents.add(e);
 			System.out.println("Would you like to add another event?");
 			input = keyboard.nextLine();
+			
 		}
 		
 		System.out.println("Congratulations! Here are your events!:");
-		System.out.println(aEvents.toString());
+		for(Event q : aEvents){
+			System.out.println(q.getEventName());
+		}
+		
 		System.out.println("Please Select an Event to Update or say no");
 		String updateInput;
 		updateInput = keyboard.nextLine();
@@ -52,24 +56,29 @@ public class Main {
 		}
 		//allows users to update events
 		else{
+			//reaches inside the else
+			String  stillUpdate = "yes";
+			while(!stillUpdate.equals("no")){
 			for(Event i : aEvents){
-				if(i.equals(updateInput)){
+				if(i.getEventName().equals(updateInput)){
 					System.out.println("Please enter your update!");
 					String eventUpdate;
 					eventUpdate = keyboard.nextLine();
 					i.setUpdate(eventUpdate);
 				}
 				}
+			System.out.println("Would you like to update again?");
+			stillUpdate = keyboard.nextLine();
 			}
-		System.out.println(aEvents.toString());
+			}
 		for(Event a: aEvents){
 			System.out.println(a.getEventName());
 			System.out.println(a.getUpdates().toString());
 
-			
+
 		}
 		}
-			
+			// need to come up with a way to go back and update but maybe future feature
 		}
 		
 		

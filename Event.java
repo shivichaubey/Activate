@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 public class Event {
 //var 
+	//of type event
 	private String nameOfEvent;
 	//how to make var for location?
 	private String location;
