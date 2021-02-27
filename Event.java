@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 public class Event {
 //var 
@@ -112,6 +113,7 @@ public class Event {
 	public LinkedList getNotSafeList(){
 		return notSafe;
 	}
+
 	
 	
 }
