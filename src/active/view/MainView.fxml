@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="active.view.MainViewController">
+   <center>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox prefHeight="24.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goHome" text="Home!" />
+               </children>
+            </HBox>
+         </bottom></BorderPane>
+   </center>
+</BorderPane>
